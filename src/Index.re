@@ -1,5 +1,4 @@
 // Entry point
-
 [@bs.val] external document: Js.t({..}) = "document";
 
 // We're using raw DOM manipulations here, to avoid making you read
@@ -27,22 +26,4 @@ let makeContainer = text => {
   content;
 };
 
-// All 4 examples.
-ReactDOMRe.render(<Greeting />, makeContainer("Atomic Greeting"));
-
-ReactDOMRe.render(
-  <BlinkingGreeting> {React.string("Hello!")} </BlinkingGreeting>,
-  makeContainer("Blinking Greeting"),
-);
-
-ReactDOMRe.render(
-  <ReducerFromReactJSDocs />,
-  makeContainer("Reducer From ReactJS Docs"),
-);
-
-ReactDOMRe.render(
-  <FetchedDogPictures />,
-  makeContainer("Fetched Dog Pictures"),
-);
-
-ReactDOMRe.render(<FetchRandomDog />, makeContainer("1 random Dog"));
+ReactDOMRe.render(<Menu />, makeContainer("Menu"));
