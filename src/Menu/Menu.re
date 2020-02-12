@@ -9,6 +9,7 @@ let make = () => {
     <button onClick={_ => ReasonReactRouter.push("/fetchRandomDog")}> {React.string("Fetch Random Dog")} </button>
     <button onClick={_ => ReasonReactRouter.push("/greeting")}> {React.string("Greeting")} </button>
     <button onClick={_ => ReasonReactRouter.push("/reducerFromReactJSDocs")}> {React.string("Reducer From ReactJS Docs")} </button>
+    <button onClick={_ => ReasonReactRouter.push("/profile")}> {React.string("Profile GitHub")} </button>
 
     {switch (url.path) {
     | ["blinkingGreeting"] => <BlinkingGreeting> {React.string("Hello!")} </BlinkingGreeting>;
@@ -16,6 +17,7 @@ let make = () => {
     | ["fetchRandomDog"] => <FetchRandomDog />;
     | ["greeting"] => <Greeting />;
     | ["reducerFromReactJSDocs"] => <ReducerFromReactJSDocs />;
+    | ["profile"] => <Profile />;
     | _ => <div> {React.string("Choisir un composant a afficher")} </div>
     }}
   </div>
