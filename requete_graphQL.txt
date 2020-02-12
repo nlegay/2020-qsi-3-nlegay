@@ -1,0 +1,16 @@
+query {
+    user(login:"nlegay") {
+      name
+      avatarUrl(size:200)
+      status {
+          emojiHTML
+          message
+      }
+      followers {
+          totalCount
+      }
+      following {
+          totalCount
+      }
+    }
+  }
